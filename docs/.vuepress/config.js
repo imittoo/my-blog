@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Arif',
   description: 'The story about Arif.',
-  dest: './dist',
+  // dest: './dist',
   repo: 'https://github.com/meidongwei/my-blog.git', // github 链接
   themeConfig: {
     // 添加导航栏
