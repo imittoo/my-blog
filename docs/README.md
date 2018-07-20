@@ -1,8 +1,9 @@
 ---
+# 主页的配置
 layout: myHome # 自定义主页
 link: /web/
 msg: Maldives
-home: false
+home: false # 是否启用默认主题的主页
 heroImage: /hero.png
 actionText: 快速上手 →
 actionLink: /zh/guide/

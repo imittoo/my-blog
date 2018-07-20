@@ -2,8 +2,7 @@ module.exports = {
   title: 'Arif',
   description: 'The story about Arif.',
   dest: './dist',
-  // base: '/mt-blog/', // 设置站点根路径
-  repo: 'https://github.com/TaoXuSheng/mt-blog', // 添加 github 链接
+  repo: 'https://github.com/meidongwei/my-blog.git', // github 链接
   themeConfig: {
     // 添加导航栏
     nav: [
