@@ -1,51 +1,40 @@
 ---
-title: sass
+title: Permission denied (publickey)
 ---
 
-# sass
+# Permission denied (publickey)
 
-## 下载 sass 及依赖
-```bash
-npm install sass --save-dev
-npm install sass-loader --save-dev
-npm install node-sass --save-dev
-```
+将 vuepress 部署到 GitHub 页面的时候，遇到了一个报错：
 
-```scss
-<style lang="scss">
-</style>
-```
+::: danger
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+:::
 
+## 解决方式：
 
-## vue 中引入全局 sass 变量
-如果你有一个全局的 sass 变量文件（all.scss），并且想要在所有的 vue 文件中使用这些变量，我们需要在每个使用到变量的地方都引入 all.scss
-
-```css
-@import 'path/fileName.scss'
-```
-
-## sass-resources-loader
-sass-resources-loader 可以访问 sass 资源任何一个需要访问的 sass 模块。所以，可以使用共享变量和混合所有 SASS 样式，而不去每个文件都引用。
+1. 先看本地是否有ssh文件
 
 ```bash
-npm install sass-resources-loader --save-dev
+cd ~/.ssh
+ls # id_rsa   id_rsa.pub   known_hosts
 ```
 
-```js
-// 修改 build -> utils.js
-scss: generateLoaders('sass')
-// 修改为
-scss: generateLoaders('sass').concat(
-	{
-		loader: 'sass-resources-loader',
-		options: {
-		resources: path.resolve(__dirname, '../src/assets/css/all.scss') // 全局变量文件路径
-		}
-	}
-)
+2. 有则把公钥加到github
+
+```bash
+cat id_rsa.pub
 ```
 
-```js
-// main.js
-import './assets/css/all.scss' // 引用一次就好
+3. github => setting => SSH and GPG keys => New SSH key
+
+将刚才 id_rsa.pub 中的内容复制到 key 下面，并点击 Add SSH key
+
+4. 执行
+
+```bash
+ssh -T git@github.com
+# Hi youcanping! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+
+5. 重新部署一下就 OK
