@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Arif',
+  title: "Arif's Blog",
   description: 'The story about Arif.',
   // dest: './dist',
   repo: 'https://github.com/meidongwei/my-blog.git', // github 链接

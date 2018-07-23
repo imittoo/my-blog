@@ -1,7 +1,8 @@
 <template>
   <div class="hero">
-    <h1 class="title">{{ data.msg }}</h1>
-    <a :href="data.link">{{ data.actionText }}</a>
+    <img class="heroImg" :src="data.heroImage" alt="hero">
+    <h1 class="title">{{ data.title }}</h1>
+    <a :href="data.actionLink">{{ data.actionText }}</a>
   </div>
 </template>
 <script>
@@ -20,5 +21,7 @@ export default {
   flex-direction column
   justify-content center
   align-items center
+  .heroImg
+    width 400px
 </style>
 
