@@ -22,6 +22,6 @@ export default {
   justify-content center
   align-items center
   .heroImg
-    width 400px
+    width 300px
 </style>
 
