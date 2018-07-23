@@ -21,6 +21,8 @@ export default {
   flex-direction column
   justify-content center
   align-items center
+  .title
+    color #3eaf7c
   .heroImg
     width 300px
 </style>

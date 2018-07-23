@@ -2,8 +2,8 @@
 # 主页的配置
 layout: myHome # 自定义主页
 heroImage: /hero.svg
-actionText: Welcome →
-actionLink: /web/
+actionText: 欢迎进入 →
+actionLink: /blog/
 title: The devil is in the details.
 
 # 是否启用默认主题的主页
