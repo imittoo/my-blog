@@ -5,7 +5,7 @@ link: /web/
 msg: Maldives
 home: false # 是否启用默认主题的主页
 heroImage: /hero.png
-actionText: 快速上手 →
+actionText: 欢迎光临 →
 actionLink: /zh/guide/
 features:
 - title: 简洁至上
