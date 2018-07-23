@@ -20,21 +20,33 @@ cd ~/.ssh
 ls # id_rsa   id_rsa.pub   known_hosts
 ```
 
-2. 有则把公钥加到github
+2. 没有的话添加一个
+
+```bash
+ssh-keygen # 可以使用 id_rsa 这个名字
+```
+
+3. 有则把公钥加到github
 
 ```bash
 cat id_rsa.pub
 ```
 
-3. github => setting => SSH and GPG keys => New SSH key
+4. github => setting => SSH and GPG keys => New SSH key
 
 将刚才 id_rsa.pub 中的内容复制到 key 下面，并点击 Add SSH key
 
-4. 执行
+6. 执行
 
 ```bash
 ssh -T git@github.com
 # Hi youcanping! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-5. 重新部署一下就 OK
+6. 重新部署一下就 OK
+
+
+## 参考
+
+* [解决方案 git@github.com出现Permission denied (publickey)](https://blog.csdn.net/samxx8/article/details/51497004)
+* [VuePress从零开始搭建自己的博客](https://segmentfault.com/a/1190000015237352)
