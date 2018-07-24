@@ -27,24 +27,17 @@ module.exports = {
     serviceWorker: true, // PWA
   },
   head: [
+    // ['link', {
+    //   rel: 'manifest',
+    //   href: '/manifest.json'
+    // }],
     ['link', {
       rel: 'icon',
-      href: `/logo.png`
+      href: '/logo2.png'
+    }],
+    ['link', {
+      rel: 'shortcut icon',
+      href: '/favicon.ico'
     }]
-  ],
-  // head: [
-  //   ['link', {
-  //     rel: 'manifest',
-  //     href: '/manifest.json'
-  //   }],
-  //   ['link', {
-  //     rel: 'apple-touch-icon',
-  //     href: '/logo.png'
-  //   }],
-  //   ['link', {
-  //     rel: 'shortcut icon',
-  //     type: "image/x-icon",
-  //     href: `/favicon.ico`
-  //   }]
-  // ]
+  ]
 }
