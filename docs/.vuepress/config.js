@@ -1,7 +1,7 @@
 module.exports = {
   title: "Arif's Blog",
   description: 'The story about Arif.',
-  repo: 'https://github.com/meidongwei/my-blog.git', // github 链接
+  repo: 'https://github.com/meidongwei/my-blog.git', // github 仓库链接
   themeConfig: {
     // 添加导航栏
     nav: [
@@ -24,20 +24,15 @@ module.exports = {
     },
     lastUpdated: 'Last Updated',
     activeHeaderLinks: false, // 激活标题链接，默认为true
-    serviceWorker: true, // PWA
   },
   head: [
-    // ['link', {
-    //   rel: 'manifest',
-    //   href: '/manifest.json'
-    // }],
-    ['link', {
+    ['link', { // 标签栏图标
       rel: 'icon',
       href: '/logo.png'
     }],
-    // ['link', {
-    //   rel: 'shortcut icon',
-    //   href: '/favicon.ico'
-    // }]
+    ['link', { // 桌面图标
+      rel: 'apple-touch-icon',
+      href: '/logo.png'
+    }]
   ]
 }
