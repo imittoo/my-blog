@@ -33,11 +33,11 @@ module.exports = {
     // }],
     ['link', {
       rel: 'icon',
-      href: '/logo2.png'
+      href: '/logo.png'
     }],
-    ['link', {
-      rel: 'shortcut icon',
-      href: '/favicon.ico'
-    }]
+    // ['link', {
+    //   rel: 'shortcut icon',
+    //   href: '/favicon.ico'
+    // }]
   ]
 }
