@@ -25,14 +25,26 @@ module.exports = {
     lastUpdated: 'Last Updated',
     activeHeaderLinks: false, // 激活标题链接，默认为true
     serviceWorker: true, // PWA
-    head: [
-      ['link', {
-        rel: 'manifest',
-        href: '/manifest.json'
-      }], ['link', {
-        rel: 'apple-touch-icon',
-        href: '/logo.png'
-      }],
-    ]
-  }
+  },
+  head: [
+    ['link', {
+      rel: 'icon',
+      href: `/logo.png`
+    }]
+  ],
+  // head: [
+  //   ['link', {
+  //     rel: 'manifest',
+  //     href: '/manifest.json'
+  //   }],
+  //   ['link', {
+  //     rel: 'apple-touch-icon',
+  //     href: '/logo.png'
+  //   }],
+  //   ['link', {
+  //     rel: 'shortcut icon',
+  //     type: "image/x-icon",
+  //     href: `/favicon.ico`
+  //   }]
+  // ]
 }
