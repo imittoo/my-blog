@@ -4,14 +4,9 @@ title: 使用 VuePress 搭建个人网站
 
 # 使用 VuePress 搭建个人网站
 
-* 使用 VuePress 搭建个人网站很简单，你所看到的当前网站就是一个简单的案例。
-* 你要会一点 html、css、javascript、vue 和 Markdown 语法。
+使用 VuePress 搭建个人网站很简单，你要会一点 vue 和 Markdown 语法。
 
-## VuePress 是什么？
-
-* [VuePress官网](https://vuepress.docschina.org/)
-
-## 起步就像数 1, 2, 3 一样容易
+## 起步
 
 ```bash
 # 在桌面创建目录 demo 并且进入
@@ -44,3 +39,62 @@ echo '# Hello VuePress' > docs/README.md
 yarn docs:dev # 或 npm run docs:dev
 ```
 
+## 构建目录
+
+```bash
+cd docs && mkdir .vuepress
+cd .vuepress && touch config.js && mkdir public
+...
+```
+
+目录结构
+
+```js
+├── docs
+│   ├── .vuepress // vuepress 相关
+│   │   ├── components // 自定义的组件
+│   │   ├── dist // 打包生成的文件
+│   │   ├── public // 静态资源
+│   │   └── config.js // 配置文件
+│   ├── blog // 自定义目录
+│   │   ├── page1.md // blog目录中的文章
+│   │   └── README.md // blog主页配置
+│   └── README.md // 主页配置
+├── node_modules
+├── .gitattributes
+├── package.json
+├── README.md
+└── yarn.lock
+```
+
+## 配置 config.js
+
+config.js 用于配置网站及主题
+
+```js
+module.exports = {
+  title: "Maldives", // 网站标题
+  description: 'Maldves is very beautiful.', // 网站描述
+  repo: 'https://github.com/yourname/demo.git', // github 仓库链接
+  themeConfig: { // 主题配置
+    nav: [ // 导航栏
+      { text: '主页', link: '/' },
+      { text: '博客', link: '/blog/' },
+      ...
+    ],
+    sidebar: { // 侧边栏
+      '/blog/': [ 'page1' ]
+    },
+    lastUpdated: 'lastUpdated', // 最后更新
+    ...
+  },
+  head: [ // 网站 head 配置
+    ['link', {
+      rel: 'icon',
+      href: '/logo.png' // 图片位于 public 目录
+    }]
+  ]
+}
+```
+
+未完待续...
