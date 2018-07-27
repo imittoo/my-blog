@@ -20,7 +20,7 @@ module.exports = {
     ],
     // 添加侧边栏
     sidebar: {
-      '/blog/': [ 'page3', 'page2', 'page1' ]
+      '/blog/': [ 'page4', 'page3', 'page2', 'page1' ]
     },
     // lastUpdated: '最后更新',
     activeHeaderLinks: false, // 激活标题链接，默认为true
