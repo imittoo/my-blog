@@ -32,7 +32,7 @@ module.exports = {
     }],
     ['link', { // 桌面图标
       rel: 'apple-touch-icon',
-      href: '/logo.jpg'
+      href: '/logo.png'
     }]
   ]
 }
