@@ -4,43 +4,45 @@ title: 使用 Electron 构建桌面应用
 
 # 使用 Electron 构建桌面应用
 
-Electron 可以让我们可以用 HTML，CSS 和 JavaScript 来构建跨平台桌面应用程序。
+Electron 让我们可以用 HTML，CSS 和 JavaScript 来构建跨平台桌面应用程序。
 
-## 目录结构
+## 第一个 Electron 应用
+
+应用结构
 
 ```
-your-app/
+ele-app/
   ├── package.json
   ├── main.js
   └── index.html
 ```
 
-## 开始
+创建项目并初始化
 
 ```bash
-# 创建项目目录、初始化项目
-cd desktop && mkdir ele-app && cd ele-app
-yarn init
-```
-
-修改 package.json 文件
-
-```js
-// package.json
-{
-  "name": "your-app",
-  "version": "0.1.0",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  }
-}
+cd desktop && mkdir ele-app
+cd ele-app && yarn init # entry point (index.js): main.js
+touch main.js index.html
 ```
 
 安装 Electron
 
 ```bash
 yarn add electron -D
+```
+
+修改 package.json
+
+```js
+// package.json
+{
+  "name": "ele-app",
+  "main": "main.js",
+  // 添加如下代码
+  "scripts": {
+    "start": "electron .",
+  }
+}
 ```
 
 编写 main.js
@@ -120,3 +122,54 @@ app.on('activate', () => {
 ```bash
 yarn start
 ```
+
+## 已有的 vue 项目 + Electron
+
+修改 vue 项目配置
+
+```js
+// config/index.js
+build: {
+  // assetsPublicPath: '/',
+  assetsPublicPath: './'
+}
+```
+
+```js
+// build/utils.js
+return ExtractTextPlugin.extract({
+  use: loaders,
+  fallback: 'vue-style-loader',
+  // 添加下面一行
+  publicPath: '../../'
+})
+```
+
+打包 vue 项目
+
+```bash
+yarn build # npm run build
+```
+
+安装 electron-packager
+
+```bash
+yarn add electron-packager -D
+```
+
+修改 package.json
+
+```js
+// package.json
+{
+  "name": "ele-app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    // 添加如下代码
+    "package": "electron-packager ./ myapp --out ./OutApp",
+  }
+}
+```
+
+将 vue 项目 dist 中的 index.html 和 static 复制到 Electron 项目根目录，然后执行 `yarn start` 查看一下效果，没问题的话就使用 `yarn package` 打包。

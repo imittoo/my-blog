@@ -22,7 +22,7 @@ module.exports = {
     sidebar: {
       '/blog/': [ 'page5', 'page4', 'page3', 'page2', 'page1' ]
     },
-    // lastUpdated: '最后更新',
+    lastUpdated: '上次更新',
     activeHeaderLinks: false, // 激活标题链接，默认为true
   },
   head: [
