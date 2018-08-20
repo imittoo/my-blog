@@ -2,7 +2,7 @@
   <div class="hero">
     <img class="heroImg" :src="data.heroImage" alt="hero">
     <h1 class="title">{{ data.title }}</h1>
-    <a :href="data.actionLink">{{ data.actionText }}</a>
+    <!-- <a :href="data.actionLink">{{ data.actionText }}</a> -->
   </div>
 </template>
 <script>
