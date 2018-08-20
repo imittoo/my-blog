@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <h1>博客首页</h1>
-    <ul>
-      <li>用最简洁的语言～</li>
-      <li>写通俗易懂的博客～</li>
-      <li>希望你能喜欢～</li>
-    </ul>
-    <ul>
-      <li>注：移动版目录请点击左上角按钮。</li>
-    </ul>
-  </div>
+  <div class="block"></div>
 </template>
+
+<style lang="stylus" scoped>
+.block
+  width 100%
+  height 500px
+  background-color #eee
+</style>

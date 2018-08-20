@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Arif's Blog",
+  title: "Arif 的个人博客",
   description: 'The story about Arif.',
   repo: 'https://github.com/meidongwei/my-blog.git', // github 仓库链接
   themeConfig: {
@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         text: '博客',
-        link: '/blog/'
+        link: '/blog/page5'
       },
       {
         text: 'GitHub',
