@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         text: '博客',
-        link: '/blog/page5'
+        link: '/blog/page6'
       },
       {
         text: 'GitHub',
@@ -20,7 +20,9 @@ module.exports = {
     ],
     // 添加侧边栏
     sidebar: {
-      '/blog/': [ 'page5', 'page4', 'page3', 'page2', 'page1' ]
+      '/blog/': [
+        'page6', 'page5', 'page4', 'page3', 'page2', 'page1'
+      ]
     },
     lastUpdated: '上次更新',
     activeHeaderLinks: false, // 激活标题链接，默认值：true
